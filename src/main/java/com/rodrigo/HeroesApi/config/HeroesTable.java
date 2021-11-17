@@ -31,7 +31,7 @@ public class HeroesTable {
                 .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(ENDPOINT_DYNAMO, REGION_DYNAMO))
                 .build();
         DynamoDB dynamoDB = new DynamoDB(client);
-        String tableNames = "Heroes";
+        String tableNames = "Heroes_Table";
 
         try {
             Table table = dynamoDB.createTable(tableNames,

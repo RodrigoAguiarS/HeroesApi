@@ -22,8 +22,8 @@ public class HeroesService {
     public Mono<Heroes> save(Heroes heroes){
         return Mono.justOrEmpty(this.heroesRepository.save(heroes));
     }
-    public Mono<Boolean> deleteByIdMono(String id){
+    public Mono<Boolean> deletebyIDHero(String id) {
         heroesRepository.deleteById(id);
-        return Mono.justOrEmpty(true);
+        return Mono.just(true);
     }
 }

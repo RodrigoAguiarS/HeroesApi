@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@DynamoDBTable(tableName = "Heroes_Table")
+@DynamoDBTable(tableName = "Heroes_Table_demo")
 public class Heroes {
     @Id
     @DynamoDBHashKey(attributeName = "id")
@@ -45,9 +45,9 @@ public class Heroes {
         this.films = films;
     }
     public Heroes(String id, String name, String universe, int films){
-        this.id=id;
-        this.name=name;
-        this.universe=universe;
-        this.films=films;
+        this.id = id;
+        this.name = name;
+        this.universe = universe;
+        this.films = films;
     }
 }

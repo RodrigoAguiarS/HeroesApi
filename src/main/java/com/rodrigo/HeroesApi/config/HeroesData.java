@@ -32,7 +32,7 @@ public class HeroesData {
                 .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(ENDPOINT_DYNAMO, REGION_DYNAMO))
                 .build();
         DynamoDB dynamoDB = new DynamoDB(client);
-        Table table = dynamoDB.getTable("HeroesTable");
+        Table table = dynamoDB.getTable("Heroes_Table_demo");
         Item hero = new Item().withPrimaryKey("id", 1)
                 .withString("name", "Homem Aranha")
                 .withString("universe", "Marvel")

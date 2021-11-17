@@ -4,7 +4,6 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import org.springframework.data.annotation.Id;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

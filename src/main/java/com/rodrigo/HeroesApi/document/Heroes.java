@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@DynamoDBTable(tableName = "Heroes_Table_demo")
+@DynamoDBTable(tableName = "Heroes_Api_Table")
 public class Heroes {
     @Id
     @DynamoDBHashKey(attributeName = "id")

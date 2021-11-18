@@ -24,7 +24,7 @@ public class HeroesTable {
                 .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(ENDPOINT_DYNAMO, REGION_DYNAMO))
                 .build();
         DynamoDB dynamoDB = new DynamoDB(client);
-        String tableNames = "Heroes_Table_demo";
+        String tableNames = "Heroes_Api_Table";
 
         try {
             System.out.println("Criando tabela, aguarde...");
@@ -34,8 +34,8 @@ public class HeroesTable {
                     Arrays.asList(new AttributeDefinition("id", ScalarAttributeType.S)
                     ),
                     new ProvisionedThroughput(5L,5L));
-                    table.waitForActive();
-                    System.out.println("Sucesso " + table.getDescription().getTableStatus());
+            table.waitForActive();
+            System.out.println("Sucesso " + table.getDescription().getTableStatus());
 
         }
         catch (Exception e){
